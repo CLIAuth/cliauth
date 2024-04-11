@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Can replace with your own locale -->
+<head>
+  <!-- Compatability -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title and Description -->
+  <title>CLI Authentication</title>
+  <meta name="description" content="Authenticate with your command-line app.">
+  <meta name="author" content="python660">
+
+  <!-- Social media -->
+  <meta property="og:title" content="CLI Authentication">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://replit.com/@python660">
+  <meta property="og:description" content="Authenticate with your command-line app.">
+  <!--meta property="og:image" content="preview.png"-->
+
+  <!-- Preconnect to certain useful domains as needed -->
+  <!--link rel="preconnect" href="https://cdnjs.cloudflare.com"-->
+
+  <!-- Favicons and icons -->
+  <!--link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"-->
+
+  <!-- Link your CSS up here -->
+  <link rel="stylesheet" href="loader.css">
+</head>
+<body>
+  <div id="mainContent">
+    <!-- Website Content -->
+    <form id="loginForm" action="/api/revoke" method="get">
+      <h1>Revoke ALL Authentication Tokens</h1>
+      <p>Doing so will log you out of ALL DEVICES and invalidate your CLI AUTH KEYs.</p>
+      <button type="button" onclick="LoginWithReplit(afterLogin)">Log out ALL sessions</button>
+      <p id="errorBox"></p>
+    </form>
+  </div>
+  <div class="loader" id="loadingBox">
+  </iv>
+  
+
+  <!-- Javascript -->
+  <script src="auth.js"></script>
+  <script src="revoke.js"></script>
+  <script>window.onunload = function(){};</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

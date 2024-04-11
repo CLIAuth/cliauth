@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CLI Auth</title>
+    <style>/*Remove lag between rendering and CSS computing*/
+      @import url('Inter.ttf');
+      html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(#e66465, #9198e5);
+        color: white;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+      }
+      .outsidePopup {opacity: 0;}
+      .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        
+        box-shadow: 0 0 20px rgb(0 0 0 / 0.3);
+      }
+      .loadWrapper {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      
+      @keyframes spin {
+        0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+        100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+      }
+
+      .loadText {
+        transition: opacity 0.9s;
+        opacity: 0;
+      }
+      
+      .loadLastResort {
+        transition: opacity 0.9s;
+        opacity: 0;
+      }
+      
+    </style>
+    <link rel="stylesheet" href="index.css" type="text/css">
+  </head>
+  
+  <body>
+    <div class="loadWrapper">
+      <div class="loader"></div>
+      <h1>Loading..</h1>
+      <p class="loadText">Are popups blocked?</p>
+      <p class="loadLastResort">Still not working?<br/> Click <a href="https://cliauth.readthedocs.io" target="_blank">here</a>.</p>
+    </div>
+    <span class="outsidePopup">
+      <div class="popup">
+        <h1 class="title">Command-line Authentication</h1>
+        <img class="round icon" src="icon.png">
+        <p class="desc">We believe in a safe and secure web. That's why we created CLI Auth, a secure auth protocol using the power of cryptographic signatures, which lets you better authenticate your clients without hiding code.</p>
+        <p class="popupNotice">Click on the following button to get started with the CLI Auth Protocol.</p>
+        <p class="copyrightNotice">&copy; python660 2024</p>
+        <button onclick="visitPage()" class="openApp">Go to the <b>CLI Auth Docs</b></button>
+      </div>
+    </span>
+    <script src="index.js"></script>
+  </body>
+</html>

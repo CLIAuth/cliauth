@@ -1,0 +1,95 @@
+.outsidePopup {
+  transition: opacity 0.9s;
+  transition-delay: 0.75s;
+  opacity: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup {
+  border: solid 0px green;
+  transition: transform 0.6s;
+  transition-delay: 0s;
+  background-color: #324157;
+  width: min(350px, calc(100vw - 25px));
+  height: min(550px, calc(100vh - 25px));
+  padding: 25px;
+  border-radius: 25px;
+  /*Center Image*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*END Center Image*/
+  box-shadow: 0 0 20px rgb(0 0 0 / 0.75);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cssZoomEligible.popup:hover {
+  transform: translate(-50%, -50%) scale(1.07);
+}
+
+.popup .title {
+  
+}
+
+.popup .icon {
+  width: 25%;
+  background-color: white;
+  padding: 5px;
+  /*Center Image*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*END Center Image*/
+}
+.popup .icon.round {
+  border-radius: 50%;
+}
+.popup .icon.square {
+  border-radius: 5px;
+}
+
+.popup .desc {
+  font-size: 1.2em;
+}
+
+.popup .popupNotice {
+  color: #c7c7c7;
+}
+
+.popup .copyrightNotice {
+  color: #d9d9d9;
+}
+
+.popup .openApp {
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 20px;
+  min-width: 90%;
+  border: none;
+  background-color: #333ed7;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5em;
+  box-shadow: 0 0 20px rgb(0 0 0 / 0.2);
+  transition: transform 0.6s;
+}
+.popup .openApp:hover {
+  transform: translateX(-50%) scale(1.035, 1.1);
+}
+/*
+<div id="popup">
+      <h1 id="title">The Programmer Republic</h1>
+      <img id="icon" src="icon.png">
+      <p id="desc">The Programmer Republic, abbreviated as tPR, is a free programmer-oriented democratic society for all computer-related discussions.</p>
+      <p id="popupNotice">Please click on the following button to access The Programmer Republic. We're sorry for any inconvenience.</p>
+      <button id="openApp">Go to <b>irc.cluster.ws</b></button>
+    </div>
+*/
